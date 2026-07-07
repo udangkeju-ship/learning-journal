@@ -1,106 +1,101 @@
 # Modern Computer System Architecture: Von Neumann, CPU, ISA, and Memory Management
 
-Repository ini berisi ringkasan materi dan hasil pembelajaran mengenai **Arsitektur Sistem Komputer Modern** sebagai dasar untuk memahami cara kerja komputer dalam konteks Reverse Engineering. Materi mencakup arsitektur Von Neumann, komponen CPU, Instruction Set Architecture (ISA), serta konsep manajemen memori yang menjadi fondasi dalam analisis perangkat lunak.
-
----
-
 ## Deskripsi
 
-Pada pembelajaran minggu kedua, saya mempelajari bagaimana sebuah komputer modern menjalankan instruksi mulai dari proses pengambilan instruksi dari memori, pemrosesan oleh CPU, hingga penyimpanan hasilnya kembali ke memori. Pemahaman mengenai arsitektur komputer sangat penting dalam Reverse Engineering karena membantu memahami bagaimana program dieksekusi pada tingkat rendah.
+Pada pembelajaran minggu kedua, saya mempelajari dasar-dasar arsitektur sistem komputer modern yang menjadi fondasi dalam Reverse Engineering. Materi ini membahas bagaimana komputer menjalankan sebuah program, mulai dari proses eksekusi instruksi oleh CPU, komunikasi dengan memori, hingga bagaimana perangkat lunak berinteraksi dengan perangkat keras melalui Instruction Set Architecture (ISA).
 
 ---
 
-## Tujuan
+## Tujuan Pembelajaran
 
-Repository ini dibuat dengan tujuan untuk:
+Setelah mempelajari materi ini, saya diharapkan mampu:
 
 - Memahami konsep dasar arsitektur sistem komputer modern.
-- Mempelajari cara kerja arsitektur Von Neumann.
-- Mengenal struktur dan fungsi komponen utama CPU.
-- Memahami Instruction Set Architecture (ISA) sebagai antarmuka antara perangkat keras dan perangkat lunak.
-- Mempelajari konsep dasar manajemen memori yang digunakan sistem operasi.
-- Menjadi dasar sebelum mempelajari Assembly, Disassembly, dan Reverse Engineering.
+- Menjelaskan cara kerja arsitektur Von Neumann.
+- Mengenal komponen utama CPU beserta fungsinya.
+- Memahami Instruction Set Architecture (ISA).
+- Menjelaskan konsep dasar manajemen memori.
+- Menghubungkan konsep arsitektur komputer dengan Reverse Engineering.
 
 ---
 
 ## Materi yang Dipelajari
 
-### 1. Arsitektur Von Neumann
-- Konsep stored-program.
-- Siklus Fetch–Decode–Execute.
-- Hubungan antara CPU, memori, dan perangkat I/O.
+### Arsitektur Von Neumann
 
-### 2. Central Processing Unit (CPU)
-- Arithmetic Logic Unit (ALU).
-- Control Unit (CU).
-- Register.
-- Program Counter (PC).
-- Stack Pointer (SP).
+Saya mempelajari konsep **Stored Program Architecture**, yaitu instruksi program dan data disimpan pada memori yang sama. Saya juga memahami siklus kerja CPU yang terdiri dari:
 
-### 3. Instruction Set Architecture (ISA)
+- Fetch
+- Decode
+- Execute
+
+Siklus ini menjelaskan bagaimana CPU mengambil instruksi dari memori, menerjemahkannya, kemudian mengeksekusinya.
+
+---
+
+### Central Processing Unit (CPU)
+
+Saya mempelajari komponen utama CPU, di antaranya:
+
+- **Arithmetic Logic Unit (ALU)** untuk melakukan operasi aritmatika dan logika.
+- **Control Unit (CU)** untuk mengatur jalannya instruksi.
+- **Register** sebagai penyimpanan data sementara yang berkecepatan tinggi.
+- **Program Counter (PC)** untuk menyimpan alamat instruksi berikutnya.
+- **Stack Pointer (SP)** untuk mengelola area stack.
+
+---
+
+### Instruction Set Architecture (ISA)
+
+Saya mempelajari bahwa ISA merupakan penghubung antara perangkat lunak dan perangkat keras. Materi yang dipelajari meliputi:
+
 - Pengertian ISA.
 - Perbedaan ISA dan Microarchitecture.
 - Arsitektur x86 dan x86-64.
-- Jenis instruksi dasar (Data Transfer, Arithmetic, Logic, Control Flow).
+- Jenis instruksi seperti:
+  - Data Transfer
+  - Arithmetic
+  - Logical
+  - Control Flow
 
-### 4. Manajemen Memori
-- Virtual Memory.
-- Physical Memory.
-- Memory Addressing.
-- Stack.
-- Heap.
-- Segment Memori.
+---
 
-### 5. Hubungan dengan Reverse Engineering
+### Manajemen Memori
+
+Saya mempelajari bagaimana sistem operasi mengelola memori agar program dapat berjalan secara efisien. Konsep yang dipelajari meliputi:
+
+- Virtual Memory
+- Physical Memory
+- Memory Addressing
+- Stack
+- Heap
+- Segment Memori
+
+---
+
+### Keterkaitan dengan Reverse Engineering
+
+Materi ini memberikan pemahaman dasar mengenai:
+
 - Cara CPU mengeksekusi instruksi Assembly.
-- Pentingnya register dalam proses debugging.
-- Pemahaman layout memori saat melakukan analisis program.
-- Dasar membaca kode Assembly menggunakan tools Reverse Engineering.
-
----
-
-## Tools yang Dikenal
-
-- Ghidra
-- IDA Free / IDA Pro
-- x64dbg
-- Process Hacker
-- PE-bear
-
----
-
-## Struktur Repository
-
-```text
-Week 2/
-│
-├── README.md
-├── materi/
-│   └── Architecture_System_Computer.pdf
-│
-├── notes/
-│   └── summary.md
-│
-└── assets/
-    ├── images/
-    └── screenshots/
-```
+- Fungsi register saat proses debugging.
+- Struktur memori program ketika dianalisis.
+- Dasar membaca hasil disassembly pada tools Reverse Engineering.
 
 ---
 
 ## Hasil Pembelajaran
 
-Setelah mempelajari materi ini, saya mampu:
+Setelah mempelajari materi ini, saya dapat:
 
 - Menjelaskan cara kerja arsitektur Von Neumann.
-- Memahami fungsi setiap komponen utama CPU.
-- Menjelaskan konsep Instruction Set Architecture (ISA).
-- Memahami bagaimana memori diorganisasi oleh sistem operasi.
+- Memahami fungsi setiap komponen CPU.
+- Menjelaskan peran ISA dalam komunikasi antara software dan hardware.
+- Memahami organisasi memori pada sistem komputer modern.
 - Menghubungkan konsep CPU dan memori dengan proses Reverse Engineering.
-- Memiliki dasar yang lebih kuat sebelum mempelajari Assembly dan analisis executable.
 
 ---
 
 ## Kesimpulan
 
-Materi mengenai arsitektur sistem komputer modern memberikan fondasi penting dalam Reverse Engineering. Dengan memahami bagaimana CPU mengeksekusi instruksi, bagaimana ISA mendefinisikan bahasa mesin, serta bagaimana memori dikelola oleh sistem operasi, proses analisis program pada level rendah menjadi lebih mudah dipahami. Pengetahuan ini menjadi dasar untuk mempelajari disassembly, debugging, dan analisis malware pada pertemuan berikutnya.
+Materi mengenai arsitektur sistem komputer modern memberikan dasar yang sangat penting sebelum mempelajari Reverse Engineering lebih lanjut. Dengan memahami bagaimana CPU bekerja, bagaimana instruksi dieksekusi, serta bagaimana memori dikelola oleh sistem operasi, saya memiliki bekal yang lebih kuat untuk mempelajari assembly, debugging, analisis executable, dan malware analysis pada materi berikutnya.
